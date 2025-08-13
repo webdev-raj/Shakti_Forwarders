@@ -1,0 +1,17 @@
+@font-face {
+    font-family: "primary-font";
+    src: url("./assets/fonts/Freight\ Big\ Pro\ Semibold.otf");
+}
+@font-face {
+    font-family: "secondary-font";
+    src: url("./assets/fonts/Helvetica.ttf");
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
