@@ -2,16 +2,153 @@
     font-family: "primary-font";
     src: url("./assets/fonts/Freight\ Big\ Pro\ Semibold.otf");
 }
+
 @font-face {
     font-family: "secondary-font";
-    src: url("./assets/fonts/Helvetica.ttf");
+    src: url("./assets/fonts/Gilroy-Regular.ttf");
 }
-*{
+
+
+:root {
+    --color-primary-blue: #07144e;
+    --color-secondary-red: #E63946;
+    --color-accent-gold: #F4A261;
+    --color-bg-light: #e2e2e2;
+    --color-text-dark: #222222;
+    --color-text-light: #b1b1b1;
+    --color-bg-white: #fff;
+}
+
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-html,body{
+
+html,
+body {
     height: 100%;
     width: 100%;
+    background-color: var(--color-bg-light);
+    color: #222222;
+    position: relative;
 }
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: transform 300ms ease-in-out;
+}
+
+#top-header {
+    background-color: var(--color-primary-blue);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0.7em 0;
+}
+
+#top-header .vender-contact {
+    display: flex;
+    align-items: center;
+    gap: 3em;
+}
+
+#top-header .vender-contact .vender-dtl {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3em;
+}
+
+#top-header h4,
+#top-header a {
+    font-family: "secondary-font";
+    font-weight: 100;
+    letter-spacing: -0.03vw;
+    text-align: center;
+    color: var(--color-text-light);
+}
+
+#top-header i {
+    font-size: 1.5vw;
+    color: var(--color-accent-gold);
+}
+
+#bottom-header {
+    background-color: var(--color-bg-white);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0.7em 0;
+    h1{
+        font-family: "primary-font";
+    }
+}
+
+#bottom-header nav {
+    display: flex;
+    gap: 1.5em;
+}
+
+#bottom-header nav h2{
+    font-size: 1.3em;
+    font-family: "primary-font";
+    cursor: pointer;
+}
+
+.scroll-down header{
+    transform: translateY(-100%);
+
+}
+
+.scroll-up header{
+   filter: drop-shadow(0 3px 10px rgb(170,170,170));
+   background-color: #E63946;
+}
+
+section{
+    height: 100vh;
+    width: 100%;
+}
+
+.hero {
+    margin-top: 6vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("https://www.jznlogistics.com/upload/slide/3.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}   
+
+.hero .hero-titles{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hero .hero-titles h1,p{
+    text-align: center;
+    /* font-family: "primary-font"; */
+
+}
+.hero-titles h1{
+    font-size: 3.5em;
+    font-family: "secondary-font";
+    text-transform: capitalize;
+    color: var(--color-bg-white);
+}
+
+.hero-titles p{
+    font-family: "secondary-font";
+    max-width: 80%;
+    font-size: 2vw;
+    color: #e2e2e2;
+}
+
+
+
