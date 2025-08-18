@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+    <title>Mobile Menu Test</title>
+    <style>
+        /* Test styles */
+        body {
+            padding-top: 100px;
+        }
+        .test-info {
+            background: #f0f0f0;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-info">
+        <h2>Mobile Menu Test</h2>
+        <p>Resize your browser to mobile size (≤768px) to see the menu icon</p>
+        <p>Click the menu icon to test the mobile navigation</p>
+        <p>Check browser console for debug messages</p>
+        <button onclick="testMobileMenu()" style="background: #007bff; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Force Show Mobile Menu</button>
+    </div>
+
+    <header>
+        <div id="bottom-header">
+            <div id="logo">
+                <img src="https://www.jznlogistics.com/images/logo.png" alt="">
+            </div>
+            <nav class="desktop-nav">
+                <h2>Home</h2>
+                <h2>About</h2>
+                <h2>Our Services</h2>
+                <h2>Client</h2>
+                <h2>Contact</h2>
+            </nav>
+            <div class="menu-icon" id="menuIcon">
+                <i class="ri-menu-line"></i>
+            </div>
+        </div>
+        
+        <!-- Mobile Navigation Overlay -->
+        <div class="mobile-nav-overlay" id="mobileNav">
+            <div class="mobile-nav-header">
+                <div class="mobile-logo">
+                    <img src="https://www.jznlogistics.com/images/logo.png" alt="">
+                </div>
+                <div class="close-menu" id="closeMenu">
+                    <i class="ri-close-line"></i>
+                </div>
+            </div>
+            <nav class="mobile-nav">
+                <h2>Home</h2>
+                <h2>About</h2>
+                <h2>Our Services</h2>
+                <h2>Client</h2>
+                <h2>Contact</h2>
+            </nav>
+            <div class="mobile-contact">
+                <div class="mobile-contact-item">
+                    <i class="ri-phone-fill"></i>
+                    <h4>+91 98195 57774</h4>
+                </div>
+                <div class="mobile-contact-item">
+                    <i class="ri-mail-fill"></i>
+                    <h4><a href="#">manmohan@shaktiforwarders.com</a></h4>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <script src="script.js"></script>
+    <script>
+        // Additional test script
+        console.log('Test page loaded');
+        
+        // Test function to force show mobile menu
+        function testMobileMenu() {
+            const mobileNav = document.getElementById('mobileNav');
+            if (mobileNav) {
+                mobileNav.classList.add('test-visible');
+                console.log('Mobile menu forced to show');
+                alert('Mobile menu should now be visible (red background)');
+            } else {
+                console.error('Mobile nav element not found');
+            }
+        }
+        
+        // Test if elements exist
+        setTimeout(() => {
+            const menuIcon = document.getElementById('menuIcon');
+            const mobileNav = document.getElementById('mobileNav');
+            const closeMenu = document.getElementById('closeMenu');
+            
+            console.log('Test - Menu Icon:', menuIcon);
+            console.log('Test - Mobile Nav:', mobileNav);
+            console.log('Test - Close Menu:', closeMenu);
+            
+            if (menuIcon) {
+                console.log('Menu icon found, adding test click');
+                menuIcon.addEventListener('click', () => {
+                    console.log('TEST: Menu icon clicked!');
+                    alert('Menu icon clicked! Check if mobile nav appears.');
+                });
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
