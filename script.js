@@ -22,7 +22,3 @@ window.addEventListener("scroll", () => {
   lastScroll = currentScroll;
 });
 
-
-window.addEventListener("scroll",()=>{
-  
-})
