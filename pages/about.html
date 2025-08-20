@@ -5,47 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shakti Forwarders - Custom Clearing Agents</title>
     <link rel="stylesheet" href="./about.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
     <script src="./about.js" defer></script>
 </head>
 <body>
-    <!-- Top Contact Bar -->
-    <div class="top-bar">
-        <div class="container">
-            <div class="contact-info">
-                <span><i class="fas fa-phone"></i> +91 73037 33333</span>
-                <span><i class="fas fa-phone"></i> +91 99300 73004</span>
-                <span><i class="fas fa-envelope"></i> info@jznlogistics.com</span>
-                <span><i class="fas fa-envelope"></i> jznlogistics@gmail.com</span>
-            </div>
-            <div class="license-info">
-                MUMBAI LIC No. : 11/1670 (ADFPB6403) CH (01)
-            </div>
-        </div>
-    </div>
-
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="logo">
-                <img src="https://images.pexels.com/photos/906494/pexels-photo-906494.jpeg?auto=compress&cs=tinysrgb&w=100&h=60&fit=crop" alt="Shakti Forwarders">
-                <div class="logo-text">
-                    <span class="jzn">Shakti</span>
-                    <span class="logistics">Forwarders</span>
+    <header>
+        <div id="top-header">
+            <div class="vender-contact">
+                <div class="vender-dtl">
+                    <i class="ri-phone-fill"></i>
+                    <h4>+91 98195 57774</h4>
+                </div>
+                <div class="vender-dtl">
+                    <i class="ri-mail-fill"></i>
+                    <h4 id="email"><a href="#">manmohan@shaktiforwarders.com</a></h4>
                 </div>
             </div>
-            <nav class="navigation">
-                <ul>
-                    <li><a href="#home" class="active">HOME</a></li>
-                    <li><a href="#about">ABOUT</a></li>
-                    <li><a href="#services">OUR SERVICES</a></li>
-                    <li><a href="#clients">CLIENTS</a></li>
-                    <li><a href="#contact">CONTACT</a></li>
-                </ul>
+            <div class="vender-lic">
+                <h4>Mumbai License No.: 11/80/AACS/R/369/02</h4>
+            </div>
+        </div>
+        <div id="bottom-header">
+            <div id="logo">
+                <img src="https://www.jznlogistics.com/images/logo.png" alt="">
+            </div>
+            <nav>
+                <h2><a href="index.html">Home</a></h2>
+                <h2><a href="./about.html">About</a></h2>
+                <div class="services-dropdown">
+                    <h2 class="services-trigger">Our Services</h2>
+                    <div class="dropdown-content">
+                        <div class="dropdown-links">
+                            <a href="pages/services/airService.html">Air Freight</a>
+                            <a href="#">Sea Freight</a>
+                            <a href="#">Custom House Agents</a>
+                            <a href="#">Import Clearance</a>
+                            <a href="#">Export Shipment</a>
+                            <a href="#">Procurement of Licenses</a>
+                            <a href="#">Drawback / Refund Claims</a>
+                            <a href="#">Liaison Work DGFT</a>
+                        </div>
+                    </div>
+                </div>
+                <h2><a href="client.html">Client</a></h2>
+                <h2><a href="#">Contact</a></h2>
             </nav>
+            <div class="menu-icon">
+                <i class="ri-menu-line"></i>
+            </div>
         </div>
     </header>
-
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-overlay">
@@ -97,16 +106,16 @@
             <h2>OUR MAIN SERVICES</h2>
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="service-icon red">
-                        <i class="fas fa-home"></i>
-                    </div>
+                                                <div class="service-icon red">
+                                <i class="ri-home-4-line"></i>
+                            </div>
                     <h3>CUSTOM HOUSE AGENTS</h3>
                     <p>We are well-versed with the official processes for clearing and releasing from the customs department...</p>
                 </div>
                 
                 <div class="service-card">
                     <div class="service-icon blue">
-                        <i class="fas fa-file-import"></i>
+                        <i class="ri-file-import-line"></i>
                     </div>
                     <h3>IMPORT CLEARANCE</h3>
                     <p>Undertakes Import Clearance of all kinds of commodities. Processing the customs clearance, assessment...</p>
@@ -114,7 +123,7 @@
                 
                 <div class="service-card">
                     <div class="service-icon blue">
-                        <i class="fas fa-ship"></i>
+                        <i class="ri-ship-line"></i>
                     </div>
                     <h3>EXPORT SHIPMENT</h3>
                     <p>We are specialize in shipping all kinds of cargo, via sea and air freight, in export containers...</p>
@@ -122,7 +131,7 @@
                 
                 <div class="service-card">
                     <div class="service-icon blue">
-                        <i class="fas fa-file-contract"></i>
+                        <i class="ri-file-text-line"></i>
                     </div>
                     <h3>PROCUREMENT OF LICENSES</h3>
                     <p>We handle everything from negotiation to, filling export declaration (SED), filling export ...</p>
@@ -130,7 +139,7 @@
                 
                 <div class="service-card">
                     <div class="service-icon blue">
-                        <i class="fas fa-undo"></i>
+                        <i class="ri-refresh-line"></i>
                     </div>
                     <h3>DRAWBACK / REFUND CLAIMS</h3>
                     <p>Provides refund of duties paid on raw material and inputs that have used in production of goods for...</p>
@@ -138,7 +147,7 @@
                 
                 <div class="service-card">
                     <div class="service-icon blue">
-                        <i class="fas fa-clipboard-list"></i>
+                        <i class="ri-clipboard-line"></i>
                     </div>
                     <h3>LIASION WORK DGFT</h3>
                     <p>Clients are provided with a help desk to seek guidance regarding eligible export incentives and on import of...</p>
@@ -153,7 +162,7 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <div class="footer-icon">
-                        <i class="fas fa-map-marker-alt"></i>
+                        <i class="ri-map-pin-line"></i>
                     </div>
                     <div class="footer-info">
                         <h4>ADDRESS</h4>
@@ -163,7 +172,7 @@
                 
                 <div class="footer-section">
                     <div class="footer-icon">
-                        <i class="fas fa-mobile-alt"></i>
+                        <i class="ri-smartphone-line"></i>
                     </div>
                     <div class="footer-info">
                         <h4>MOBILE</h4>
@@ -173,7 +182,7 @@
                 
                 <div class="footer-section">
                     <div class="footer-icon">
-                        <i class="fas fa-envelope"></i>
+                        <i class="ri-mail-line"></i>
                     </div>
                     <div class="footer-info">
                         <h4>EMAIL</h4>

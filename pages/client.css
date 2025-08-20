@@ -1,3 +1,25 @@
+@font-face {
+    font-family: "primary-font";
+    src: url("../assets/fonts/Freight\ Big\ Pro\ Semibold.otf");
+}
+
+@font-face {
+    font-family: "secondary-font";
+    src: url("../assets/fonts/Gilroy-Regular.ttf");
+}
+
+
+:root {
+    --color-primary-blue: #07144e;
+    --color-secondary-red: #E63946;
+    --color-accent-gold: #F4A261;
+    --color-bg-light: #e2e2e2;
+    --color-text-dark: #222222;
+    --color-text-light: #b1b1b1;
+    --color-text-dark-blue: #050c2a;
+    --color-bg-white: #fff;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -16,13 +38,193 @@ body {
     padding: 0 20px;
 }
 
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: transform 300ms ease-in-out;
+    z-index: 100;
+}
+
+/* Top Header Styles */
+#top-header {
+    background-color: var(--color-primary-blue);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0.7em 0;
+    transition: transform 300ms ease-in-out;
+}
+
+#top-header .vender-contact {
+    display: flex;
+    align-items: center;
+    gap: 3em;
+}
+
+
+.menu-icon {
+    display: none;
+}
+#top-header .vender-contact .vender-dtl {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3em;
+}
+
+#top-header h4,
+#top-header a {
+    font-family: "secondary-font";
+    font-weight: 100;
+    letter-spacing: -0.03vw;
+    text-align: center;
+    color: var(--color-text-light);
+}
+
+#top-header i {
+    font-size: 1.5vw;
+    color: var(--color-accent-gold);
+}
+
+/* Bottom Header Styles */
+#bottom-header {
+    background-color: var(--color-bg-white);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0.7em 0;
+    transition: transform 300ms ease-in-out;
+}
+
+
+#bottom-header nav {
+    display: flex;
+    gap: 1.5em;
+}
+
+#bottom-header nav h2 {
+    font-size: 1.3em;
+    font-family: "primary-font";
+    cursor: pointer;
+}
+
+#bottom-header nav h2 a {
+    text-decoration: none;
+    color: var(--color-text-dark);
+    transition: color 0.3s ease;
+}
+
+#bottom-header nav h2 a:hover {
+    color: var(--color-accent-gold);
+}
+
+/* Scroll Styles */
+.scroll-down header #top-header,
+.scroll-down header #bottom-header {
+    transform: translateY(-100%);
+    margin-top: 2vh;
+}
+
+.scroll-up header #bottom-header {
+    filter: drop-shadow(0 3px 10px rgb(170, 170, 170));
+}
+
+
+/* Services Dropdown Styles */
+.services-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.services-dropdown::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: -20px;
+    right: -20px;
+    height: 20px;
+    background: transparent;
+    z-index: 999;
+}
+
+.services-dropdown::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: 10px;
+    background: transparent;
+}
+
+.services-trigger {
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.services-trigger:hover {
+    color: var(--color-accent-gold);
+}
+
+.dropdown-content {
+    position: absolute;
+    top: calc(100% - 1px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--color-bg-white);
+    min-width: 300px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.services-dropdown:hover .dropdown-content {
+    opacity: 1;
+    visibility: visible;
+    top: calc(100% - 1px);
+}
+
+
+
+.dropdown-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-width: 250px;
+}
+
+.dropdown-links a {
+    text-decoration: none;
+    color: var(--color-text-dark);
+    font-family: "secondary-font";
+    font-size: 0.95em;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    border-left: 3px solid transparent;
+}
+
+.dropdown-links a:hover {
+    background-color: var(--color-bg-light);
+    color: var(--color-primary-blue);
+    border-left-color: var(--color-accent-gold);
+    transform: translateX(5px);
+}
+
 /* Top Header */
-.top-header {
+/* .top-header {
     background: #1e3a8a;
     color: white;
     padding: 10px 0;
     font-size: 14px;
-}
+} */
 
 .top-header .container {
     display: flex;
