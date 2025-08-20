@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // // Mobile Navigation Toggle
 // const hamburger = document.getElementById('hamburger');
 // const navMenu = document.getElementById('nav-menu');
@@ -213,3 +214,13 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+=======
+document.addEventListener("DOMContentLoaded", () => {
+  const menuIcon = document.querySelector(".menu-icon");
+  const nav = document.querySelector("#bottom-header nav");
+
+  menuIcon.addEventListener("click", () => {
+    nav.classList.toggle("active");
+  });
+});
+>>>>>>> e2e073754b53ad32393df6fe8c08cd0618f038b9

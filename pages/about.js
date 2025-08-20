@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // // Smooth scrolling for navigation links
 // document.addEventListener('DOMContentLoaded', function() {
 //     // Add smooth scrolling to all navigation links
@@ -151,6 +152,8 @@
 // });
 
 
+=======
+>>>>>>> e2e073754b53ad32393df6fe8c08cd0618f038b9
 let lastScroll = 0;
 const body = document.body;
 
@@ -175,6 +178,7 @@ window.addEventListener("scroll", () => {
   lastScroll = currentScroll;
 });
 
+<<<<<<< HEAD
 // Services Dropdown Enhancement
 document.addEventListener('DOMContentLoaded', function() {
     const servicesDropdowns = document.querySelectorAll('.services-dropdown');
@@ -216,3 +220,16 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+=======
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const menuIcon = document.querySelector(".menu-icon");
+  const nav = document.querySelector("#bottom-header nav");
+
+  menuIcon.addEventListener("click", () => {
+    nav.classList.toggle("active");
+  });
+});
+>>>>>>> e2e073754b53ad32393df6fe8c08cd0618f038b9

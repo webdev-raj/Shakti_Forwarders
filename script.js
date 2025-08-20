@@ -21,7 +21,11 @@ window.addEventListener("scroll", () => {
 
   lastScroll = currentScroll;
 });
+document.addEventListener("DOMContentLoaded", () => {
+  const menuIcon = document.querySelector(".menu-icon");
+  const nav = document.querySelector("#bottom-header nav");
 
+<<<<<<< HEAD
 // Services Dropdown Enhancement
 document.addEventListener('DOMContentLoaded', function() {
     const servicesDropdowns = document.querySelectorAll('.services-dropdown');
@@ -63,3 +67,9 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+=======
+  menuIcon.addEventListener("click", () => {
+    nav.classList.toggle("active");
+  });
+});
+>>>>>>> e2e073754b53ad32393df6fe8c08cd0618f038b9
