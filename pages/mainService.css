@@ -1,11 +1,11 @@
 @font-face {
     font-family: "primary-font";
-    src: url("../../assets/fonts/Freight\ Big\ Pro\ Semibold.otf");
+    src: url("../assets/fonts/Freight\ Big\ Pro\ Semibold.otf");
 }
 
 @font-face {
     font-family: "secondary-font";
-    src: url("../../assets/fonts/Gilroy-Regular.ttf");
+    src: url("../assets/fonts/Gilroy-Regular.ttf");
 }
 
 
