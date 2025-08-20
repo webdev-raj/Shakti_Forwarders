@@ -283,7 +283,7 @@ header {
 .scroll-down header #top-header,
 .scroll-down header #bottom-header {
     transform: translateY(-100%);
-    margin-top: 2vh;
+    margin-top: 3vh;
 }
 
 .scroll-up header #bottom-header {
@@ -537,8 +537,16 @@ header {
         display: none;
     }
 
-    .hero-titles p{
-        font-size: 1.2em;
+    .hero-titles{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .hero h1{
+        font-size: 1.8em;
+    }
+    .hero-titles h2{
+        font-size: 0.6em;
     }
 
     .menu-icon {
@@ -653,4 +661,51 @@ header {
     .footer-bottom-content {
         padding: 0 3vw;
     }
+}
+/* ✅ RESPONSIVE FIXES */
+@media (max-width: 768px) {
+    #top-header { display: none; }
+
+    .clients-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .v-divider { display: none; }
+
+    .hero-titles p { font-size: 1em; }
+
+    #bottom-header {
+        justify-content: space-between;
+        padding: 0.3em 0.7em;
+    }
+
+    /* Mobile menu */
+    #bottom-header nav {
+        display: none;
+        flex-direction: column;
+        background: var(--color-bg-white);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1em 0;
+    }
+    #bottom-header nav.active { display: flex; }
+    #bottom-header nav h2 {
+        text-align: center;
+        width: 100%;
+    }
+
+    .footer-bottom-content {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-titles h1 { font-size: 2em; }
+    .hero-titles p { font-size: 0.9em; }
+    .clients-logos img { height: 50px; }
 }

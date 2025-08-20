@@ -103,7 +103,6 @@ header {
     text-decoration: none;
     color: var(--color-text-dark);
     transition: color 0.3s ease;
-<<<<<<< HEAD
 }
 
 #bottom-header nav h2 a:hover {
@@ -235,9 +234,7 @@ header {
 .scroll-down header #top-header,
 .scroll-down header #bottom-header {
     transform: translateY(-100%);
-    margin-top: 2vh;
-=======
->>>>>>> e2e073754b53ad32393df6fe8c08cd0618f038b9
+    margin-top: 3vh;
 }
 
 #bottom-header nav h2 a:hover {

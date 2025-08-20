@@ -70,4 +70,35 @@ document.addEventListener("DOMContentLoaded", () => {
   menuIcon.addEventListener("click", () => {
     nav.classList.toggle("active");
   });
+
+  // Simple captcha refresher and basic validation mimic
+  const captchaCode = document.getElementById("captchaCode");
+  const captchaInput = document.getElementById("captchaInput");
+  const form = document.getElementById("contactForm");
+
+  if (captchaCode && captchaInput && form) {
+    const randomCode = () => {
+      const chars = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
+      let out = "";
+      for (let i = 0; i < 4; i++) out += chars[Math.floor(Math.random() * chars.length)];
+      return out.split("").join(" ");
+    };
+
+    const setCode = () => (captchaCode.textContent = randomCode());
+    setCode();
+
+    captchaCode.addEventListener("click", setCode);
+
+    form.addEventListener("submit", (e) => {
+      const normalizedInput = captchaInput.value.replace(/\s+/g, "").toUpperCase();
+      const normalizedCode = captchaCode.textContent.replace(/\s+/g, "");
+      if (normalizedInput !== normalizedCode) {
+        e.preventDefault();
+        alert("Please enter the correct code.");
+        setCode();
+        captchaInput.value = "";
+        captchaInput.focus();
+      }
+    });
+  }
 });
