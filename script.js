@@ -61,55 +61,6 @@ document.addEventListener("DOMContentLoaded", () => {
   menuIcon.addEventListener("click", () => {
     nav.classList.toggle("active");
   });
-
-<<<<<<< HEAD
-=======
-
-
-
-  //Hero section background imagechange
-  const hero = document.querySelector(".hero");
-
-const images = [
-  "./assets/images/indexMain.jpg",
-  "./assets/images/indexMain_2.jpg"
-];
-
-let currentIndex = 0;
-const indicatorsContainer = document.querySelector(".slider-indicators");
-
-// Create indicator dots
-images.forEach((_, index) => {
-  const dot = document.createElement("div");
-  dot.classList.add("dot");
-  if (index === 0) dot.classList.add("active");
-  dot.addEventListener("click", () => {
-    currentIndex = index;
-    updateSlider();
-  });
-  indicatorsContainer.appendChild(dot);
-});
-
-const dots = document.querySelectorAll(".dot");
-
-function updateSlider() {
-  hero.style.backgroundImage = `url(${images[currentIndex]})`;
-  dots.forEach(dot => dot.classList.remove("active"));
-  dots[currentIndex].classList.add("active");
-}
-
-function changeBackground() {
-  currentIndex = (currentIndex + 1) % images.length;
-  updateSlider();
-}
-
-// Auto change every 5s
-setInterval(changeBackground, 5000);
-
-
-
->>>>>>> ecfb5e0525d3e7987a94b0410c6ced2a7551c356
-  
   // GSAP + ScrollTrigger animations
   if (window.gsap && window.ScrollTrigger) {
     gsap.registerPlugin(ScrollTrigger);
