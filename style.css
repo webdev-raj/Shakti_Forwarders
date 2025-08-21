@@ -342,12 +342,21 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+<<<<<<< HEAD
     pointer-events: none;
     z-index: 2;
     background: linear-gradient(180deg, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.25) 100%);
     height: 100%;
     width: 100%;
+=======
+    background-image: url("./assets/images/indexMain.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: background-image 1s ease-in-out; /* ✅ smooth fade */
+>>>>>>> 3d8c24dea9d9d902ea3d652f4b322901b41cbd61
 }
+
 
 .hero .hero-titles {
     display: flex;
@@ -387,6 +396,32 @@ header {
     margin-top: 1em;
     line-height: 1.6;
 }
+
+.slider-indicators {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.slider-indicators .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid white;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.slider-indicators .dot.active {
+  background: white;
+}
+
+
+
 
 .about-container {
     min-height: 55vh;
