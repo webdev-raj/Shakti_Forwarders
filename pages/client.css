@@ -175,7 +175,7 @@ header {
 /* HERO */
 .hero{
     margin-top: 8%;
-    background-image: url("https://www.jznlogistics.com/upload/banners/air-cargo.jpg");
+    background-image: url("./../assets/images/air-cargo.jpg");
     background-size: cover;
     background-position: top center;
     background-repeat: no-repeat;
@@ -303,9 +303,9 @@ header {
 .clients-logos img {
     height: 50%;
     object-fit: contain;
-    aspect-ratio:1;
     mix-blend-mode: darken;
     scale: 0.9;
+    aspect-ratio: 2/2;
 }
 
 

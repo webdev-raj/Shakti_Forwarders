@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Default ease
     gsap.defaults({ ease: "power2.out" });
     gsap.from("#logo",{
-      y:"-100%",
+      y:"-10%",
       duration:1,
       opacity:0,
     })
