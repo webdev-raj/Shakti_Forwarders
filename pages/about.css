@@ -680,8 +680,16 @@ header {
         display: none;
     }
 
-    .hero-titles p {
-        font-size: 1.2em;
+    .hero-titles{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .hero h1{
+        font-size: 1.8em;
+    }
+    .hero-titles h2{
+        font-size: 0.6em;
     }
 
     .menu-icon {

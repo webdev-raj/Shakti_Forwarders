@@ -594,6 +594,18 @@ header {
         display: none;
     }
 
+    .hero-titles{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .hero h1{
+        font-size: 1.8em;
+    }
+    .hero-titles h2{
+        font-size: 0.6em;
+    }
+
     .clients-content{
         flex-direction: column;
     }
