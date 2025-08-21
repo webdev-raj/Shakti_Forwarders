@@ -73,6 +73,63 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Default ease
     gsap.defaults({ ease: "power2.out" });
+
+    // Initialize Swiper for hero (if available)
+    if (window.Swiper) {
+      const heroSwiper = new Swiper('.hero-swiper', {
+        loop: true,
+        effect: 'fade',
+        fadeEffect: { crossFade: true },
+        autoplay: {
+          delay: 3500,
+          disableOnInteraction: false
+        },
+        speed: 900,
+        pagination: {
+          el: '.hero .swiper-pagination',
+          clickable: true
+        },
+        // navigation: {
+        //   nextEl: '.hero .swiper-button-next',
+        //   prevEl: '.hero .swiper-button-prev'
+        // }
+      });
+
+      // Different texts per slide
+      const heroCaptions = [
+        {
+          title: 'Shakti Forwarders',
+          subtitle: 'Cost effective, secure, timely solutions for all shipments'
+        },
+        {
+          title: 'Air & Sea Freight Experts',
+          subtitle: 'Reliable global shipping with end-to-end visibility'
+        },
+        {
+          title: 'Customs & Compliance',
+          subtitle: 'Fast clearances, paperwork handled by professionals'
+        }
+      ];
+
+      function setHeroCaption(index) {
+        const h1 = document.querySelector('.hero-titles h1');
+        const p = document.querySelector('.hero-titles p');
+        if (!h1 || !p) return;
+        const cap = heroCaptions[index % heroCaptions.length];
+        // Fade out then in for smoother swap
+        gsap.to([h1, p], { opacity: 0, duration: 0.2, onComplete: () => {
+          h1.textContent = cap.title;
+          p.textContent = cap.subtitle;
+          gsap.fromTo([h1, p], { y: 12, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, stagger: 0.08 });
+        }});
+      }
+
+      // Initialize caption and update on slide change
+      setHeroCaption(heroSwiper.realIndex || 0);
+      heroSwiper.on('slideChangeTransitionStart', () => {
+        setHeroCaption(heroSwiper.realIndex || 0);
+      });
+    }
     gsap.from("#logo",{
       y:"-10%",
       duration:1,

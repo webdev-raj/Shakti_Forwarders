@@ -304,13 +304,49 @@ header {
 /* Hero Section Styles */
 .hero {
     min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero .hero-swiper {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero .swiper-wrapper,
+.hero .swiper-slide {
+    width: 100%;
+    height: 100%;
+}
+
+.hero .swiper-slide {
+    background-size: cover;
+    background-position: center;
+}
+
+.hero .swiper-pagination-bullet {
+    background: rgba(255,255,255,0.8);
+    opacity: 1;
+}
+.hero .swiper-pagination-bullet-active {
+    background: #fff;
+}
+
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url("https://www.jznlogistics.com/upload/slide/3.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    pointer-events: none;
+    z-index: 2;
+    background: linear-gradient(180deg, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.25) 100%);
+    height: 100%;
+    width: 100%;
 }
 
 .hero .hero-titles {
@@ -318,27 +354,38 @@ header {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    z-index: 2;
+    pointer-events: auto;
+    padding: 1.2em 2em;
+    /* background: rgba(7, 20, 78, 0.45); */
+    border-radius: 10px;
+    backdrop-filter: blur(3px);
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
 }
 
 .hero .hero-titles h1,
 .hero .hero-titles p {
     text-align: center;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.35);
 }
 
 .hero-titles h1 {
     font-size: 4.5em;
     font-family: "primary-font";
     text-transform: capitalize;
-    color: var(--color-bg-white);
+    color: #ffffff;
     line-height: 0.8em;
 }
 
 .hero-titles p {
     font-family: "secondary-font";
-    max-width: 80%;
-    font-size: 1.4em;
-    color: var(--color-bg-light);
-    margin-top: 2.5vh;
+    max-width: 900px;
+    font-size: 1.15em;
+    color: rgba(255,255,255,0.92);
+    margin-top: 1em;
+    line-height: 1.6;
 }
 
 .about-container {
