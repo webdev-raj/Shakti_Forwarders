@@ -303,12 +303,10 @@ header {
 .clients-logos img {
     height: 50%;
     object-fit: contain;
-    aspect-ratio: 3/2;
+    aspect-ratio:1;
     mix-blend-mode: darken;
     scale: 0.9;
 }
-
-/* SERVICES */
 
 
 .menu-icon {
