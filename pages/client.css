@@ -23,7 +23,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
 }
+
 
 html, body {
     height: 100%;
@@ -171,42 +173,45 @@ header {
 }
 
 /* HERO */
-.hero {
-    height: 60vh;
-    margin-top: 8vh;
+.hero{
+    margin-top: 8%;
+    background-image: url("https://www.jznlogistics.com/upload/banners/air-cargo.jpg");
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    height: 40vh;
+    width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
-    background-image: url("../assets/images/clients.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}   
+    justify-content: space-around;
+    gap: 1em;
+}
 
-.hero .hero-titles {
+.hero-titles{
     height: 100%;
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    background-color: #07144e7a;
+    justify-content: space-around;
+    background-color: #07144e72;
+
 }
 
-.hero-titles h1 {
-    font-size: 3.5em;
+.hero h1{
+    font-size: 2em;
     font-family: "secondary-font";
-    text-transform: capitalize;
-    color: var(--color-bg-white);
+    text-transform: uppercase;
+    color: var(--color-text-light);
 }
 
-.hero-titles p {
+.hero-titles h2{
     font-family: "secondary-font";
-    max-width: 80%;   /* FIXED */
-    font-size: 1.2em; /* FIXED */
-    color: #e2e2e2;
-    margin-top: 10px;
-    text-align: center;
+    font-size: 0.9em;
+    color: var(--color-text-light);
+}
+.hero-titles a{
+    text-decoration: none;
+    color: var(--color-accent-gold);
 }
 .container{
     display: flex;
@@ -255,6 +260,7 @@ header {
     width: 35%;
     height: 100%;
     border-right: 4px solid var(--color-accent-gold);
+    padding-right: 2em;
 }
 .clients-text p {
     font-size: 1.4em;
@@ -596,6 +602,7 @@ header {
         width: 90%;
         border-right: none;
         border-bottom: 3px solid var(--color-accent-gold);
+        padding-right: 0;
     }
 
     .clients-logos{

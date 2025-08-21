@@ -25,7 +25,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
 }
+
 
 html,
 body {
@@ -251,36 +253,45 @@ header {
 
 
 /* Hero Section Styles */
-.hero {
-    height: 60vh;
-    margin-top: 6vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-image: url("../assets/images/about.jpg");
-    background-position: center;
+.hero{
+    margin-top: 8%;
+    background-image: url("https://www.jznlogistics.com/upload/banners/air-cargo.jpg");
     background-size: cover;
+    background-position: top center;
     background-repeat: no-repeat;
-}
-
-.hero .hero-titles {
+    height: 40vh;
+    width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    justify-content: space-around;
+    gap: 1em;
 }
 
-.hero .hero-titles h1,
-.hero .hero-titles p {
-    text-align: center;
-    font-family: "secondary-font";
+.hero-titles{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #07144e72;
+
 }
 
-.hero-titles h1 {
-    font-size: 3.5em;
+.hero h1{
+    font-size: 2em;
     font-family: "secondary-font";
-    text-transform: capitalize;
-    color: var(--color-bg-white);
+    text-transform: uppercase;
+    color: var(--color-text-light);
+}
+
+.hero-titles h2{
+    font-family: "secondary-font";
+    font-size: 0.9em;
+    color: var(--color-text-light);
+}
+.hero-titles a{
+    text-decoration: none;
+    color: var(--color-accent-gold);
 }
 
 
