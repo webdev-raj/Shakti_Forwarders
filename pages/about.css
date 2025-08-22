@@ -255,7 +255,7 @@ header {
 /* Hero Section Styles */
 .hero{
     margin-top: 8%;
-    background-image: url("https://www.jznlogistics.com/upload/banners/air-cargo.jpg");
+    background-image: url("../assets/images/about.jpg");
     background-size: cover;
     background-position: top center;
     background-repeat: no-repeat;
