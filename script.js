@@ -178,15 +178,15 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // Background quote band parallax
-    gsap.to(".backkground", {
-      yPercent: -10,
-      scrollTrigger: {
-        trigger: ".backkground",
-        start: "top bottom",
-        end: "bottom top",
-        scrub: true
-      }
-    });
+    // gsap.to(".backkground", {
+    //   yPercent: -10,
+    //   scrollTrigger: {
+    //     trigger: ".backkground",
+    //     start: "top bottom",
+    //     end: "bottom top",
+    //     scrub: true
+    //   }
+    // });
 
     // Services heading
     gsap.from(".services-section h2", {
