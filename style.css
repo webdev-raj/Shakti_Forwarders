@@ -450,7 +450,7 @@ header {
     width: 80%;
 }
 
-.about-container .home-about .about button {
+.about-container .home-about .about button{
     font-family: "secondary-font";
     font-size: 0.9em;
     color: var(--color-secondary-red);
@@ -462,8 +462,14 @@ header {
     cursor: pointer;
 }
 
+.about-container .home-about .about button a{
+    color: var(--color-secondary-red);
+}
+
 .about-container .home-about .about button:hover {
     background-color: var(--color-secondary-red);
+}
+.about-container .home-about .about button:hover a{
     color: var(--color-bg-white);
 }
 
