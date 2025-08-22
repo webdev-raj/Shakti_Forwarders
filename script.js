@@ -101,10 +101,6 @@ document.addEventListener("DOMContentLoaded", () => {
         {
           title: 'Air & Sea Freight Experts',
           subtitle: 'Reliable global shipping with end-to-end visibility'
-        },
-        {
-          title: 'Customs & Compliance',
-          subtitle: 'Fast clearances, paperwork handled by professionals'
         }
       ];
 
