@@ -63,16 +63,51 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
   });
-});
-
-
-
-
-document.addEventListener("DOMContentLoaded", () => {
   const menuIcon = document.querySelector(".menu-icon");
   const nav = document.querySelector("#bottom-header nav");
-
+  
   menuIcon.addEventListener("click", () => {
     nav.classList.toggle("active");
   });
+});
+
+
+ // Services heading
+ gsap.from(".services-section h2", {
+  opacity: 0,
+  y: 30,
+  duration: 0.6,
+  scrollTrigger: {
+    trigger: ".services-section",
+    start: "top 85%",
+    once: true
+  }
+});
+
+// Services cards grid
+gsap.from(".services-grid .service-card", {
+  opacity: 0,
+  y: 40,
+  duration: 0.5,
+  stagger: {
+    each: 0.1,
+    from: "start"
+  },
+  scrollTrigger: {
+    trigger: ".services-grid",
+    start: "top 80%",
+    once: true
+  }
+});
+
+// Footer reveal
+gsap.from(".footer", {
+  opacity: 0,
+  y: 40,
+  duration: 0.6,
+  scrollTrigger: {
+    trigger: ".footer",
+    start: "top 90%",
+    once: true
+  }
 });
