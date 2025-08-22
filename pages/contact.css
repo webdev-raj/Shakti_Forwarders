@@ -392,6 +392,11 @@ header {
     background-repeat: no-repeat;
 }
 
+.contact-details h4{
+    font-family: "secondary-font";
+    margin:0.4em 0;
+}
+
 .text {
     background-color: #07144e93;
     display: flex;
