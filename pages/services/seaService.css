@@ -254,9 +254,9 @@ header {
 
 .hero{
     margin-top: 8%;
-    background-image: url("./../../assets/images/sea-freight.jpg");
+    background-image: url("./../../assets/images/sea_frieght.jpg");
     background-size: cover;
-    background-position: top center;
+    background-position: bottom;
     background-repeat: no-repeat;
     height: 40vh;
     width: 100%;
@@ -272,7 +272,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background-color: #07144e72;
+    background-color: #07144e85;
 
 }
 
