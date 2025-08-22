@@ -789,6 +789,12 @@ header {
         display: none;
     }
 
+    .hero{
+        min-height: 50vh;
+        margin-top: 5vh;
+        width: 100%;
+    }
+
     .hero-titles p {
         font-size: 1.2em;
     }
